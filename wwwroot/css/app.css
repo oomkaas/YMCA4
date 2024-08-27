@@ -22,6 +22,30 @@ h1:focus {
     color: #e50000;
 }
 
+.news-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-content {
+    flex: 1;
+}
+
+.list-group-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .list-group-item:hover {
+        background-color: #f8f9fa;
+    }
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
