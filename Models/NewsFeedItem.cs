@@ -1,4 +1,4 @@
-﻿namespace YMCA_Prototype.Models
+﻿namespace YMCA3
 {
 	public class NewsFeedItem
 	{

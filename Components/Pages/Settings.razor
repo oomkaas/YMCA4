@@ -1,7 +1,50 @@
-﻿@page "/settings" 
+﻿@page "/settings"
 
-<h3>Settings</h3>
+<div class="content px-4 d-flex flex-column justify-content-center align-items-center" style="height: 100vh; margin-bottom: 25px;">
+    <div class="text-center mb-4">
+        <h3>Settings</h3>
+    </div>
 
-@code {
+    <div style="width: 100%; max-width: 600px;">
+        <form>
 
-}
+            <div class="mb-4">
+                <h5>Application Settings</h5>
+                <div class="mb-3">
+                    <label for="language" class="form-label">Language</label>
+                    <select id="language" class="form-select form-control-lg shadow">
+                        <option value="en">English</option>
+                        <option value="afr">Afrikaans</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="theme" class="form-label">Theme</label>
+                    <select id="theme" class="form-select form-control-lg shadow">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5>Notification Settings</h5>
+                <div class="d-flex justify-content-between">
+                    <div class="form-check me-3">
+                        <input type="checkbox" id="emailNotifications" class="form-check-input" />
+                        <label for="emailNotifications" class="form-check-label">Email Notifications</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="smsNotifications" class="form-check-input" />
+                        <label for="smsNotifications" class="form-check-label">SMS Notifications</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-block btn-lg shadow">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>

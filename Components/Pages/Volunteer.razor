@@ -1,7 +1,70 @@
-﻿@page "/volunteer" 
+﻿@page "/volunteer"
 
-<h3>Volunteer</h3>
+<div class="content px-4 d-flex flex-column justify-content-center align-items-center" style="height: 100vh; margin-bottom: 25px;">
+    <div class="text-center mb-4">
+        <h3>Volunteer</h3>
+    </div>
 
-@code {
+    <div style="max-width: 600px; width: 100%;">
+        <form>
+            <div class="mb-4">
+                <h5>Confirm Your Contact Information</h5>
+                <div class="mb-3">
+                    <input type="text" id="fullName" class="form-control form-control-lg shadow" placeholder="Full Name" />
+                </div>
 
-}
+                <div class="mb-3">
+                    <input type="email" id="email" class="form-control form-control-lg shadow" placeholder="Email Address" />
+                </div>
+
+                <div class="mb-3">
+                    <input type="text" id="phone" class="form-control form-control-lg shadow" placeholder="Phone Number" />
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5>Select Your Available Days</h5>
+                <div class="d-flex flex-wrap">
+                    <div class="form-check me-3 mb-2">
+                        <input type="checkbox" id="monday" class="form-check-input" />
+                        <label for="monday" class="form-check-label">Monday</label>
+                    </div>
+
+                    <div class="form-check me-3 mb-2">
+                        <input type="checkbox" id="tuesday" class="form-check-input" />
+                        <label for="tuesday" class="form-check-label">Tuesday</label>
+                    </div>
+
+                    <div class="form-check me-3 mb-2">
+                        <input type="checkbox" id="wednesday" class="form-check-input" />
+                        <label for="wednesday" class="form-check-label">Wednesday</label>
+                    </div>
+
+                    <div class="form-check me-3 mb-2">
+                        <input type="checkbox" id="thursday" class="form-check-input" />
+                        <label for="thursday" class="form-check-label">Thursday</label>
+                    </div>
+
+                    <div class="form-check me-3 mb-2">
+                        <input type="checkbox" id="friday" class="form-check-input" />
+                        <label for="friday" class="form-check-label">Friday</label>
+                    </div>
+
+                    <div class="form-check me-3 mb-2">
+                        <input type="checkbox" id="saturday" class="form-check-input" />
+                        <label for="saturday" class="form-check-label">Saturday</label>
+                    </div>
+
+                    <div class="form-check me-3 mb-2">
+                        <input type="checkbox" id="sunday" class="form-check-input" />
+                        <label for="sunday" class="form-check-label">Sunday</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg shadow">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

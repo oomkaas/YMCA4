@@ -17,13 +17,13 @@
         {
             displayText = fullText.Substring(0, i + 1);
             StateHasChanged();
-            await Task.Delay(1000); 
+            await Task.Delay(500); 
         }
 
 
         displayText = fullText;
         StateHasChanged();
-        await Task.Delay(500); 
+        await Task.Delay(250); 
 
         NavigateToLoginPage();
     }

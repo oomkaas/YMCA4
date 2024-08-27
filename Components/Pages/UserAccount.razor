@@ -1,7 +1,46 @@
-﻿@page "/useraccount" 
+﻿@page "/useraccount"
 
-<h3>UserAccount</h3>
+<div class="content px-4 d-flex flex-column justify-content-center align-items-center" style="height: 100vh; margin-bottom: 25px;">
+    <div class="text-center mb-4">
+        <h3>User Account</h3>
+    </div>
 
-@code {
+    <div style="width: 100%; max-width: 800px;">
+        <form>
+            <div class="d-flex justify-content-between mb-3">
+                <input type="text" id="fullName" class="form-control form-control-lg shadow me-2" placeholder="Full Name" style="flex: 1;" />
+                <input type="email" id="emailAddress" class="form-control form-control-lg shadow ms-2" placeholder="Email Address" style="flex: 1;" />
+            </div>
 
-}
+            <div class="d-flex justify-content-between mb-3">
+                <input type="text" id="phoneNumber" class="form-control form-control-lg shadow me-2" placeholder="Phone Number" style="flex: 1;" />
+                <input type="text" id="city" class="form-control form-control-lg shadow ms-2" placeholder="City" style="flex: 1;" />
+            </div>
+
+            <div class="d-flex justify-content-between mb-3">
+                <input type="password" id="password" class="form-control form-control-lg shadow me-2" placeholder="Password" style="flex: 1;" />
+                <input type="password" id="confirmPassword" class="form-control form-control-lg shadow ms-2" placeholder="Confirm Password" style="flex: 1;" />
+            </div>
+
+            <div class="mb-3">
+                <label for="membershipType" class="form-label">Membership Type</label>
+                <select id="membershipType" class="form-select form-control-lg shadow">
+                    <option value="full">Full Membership</option>
+                    <option value="associate">Associate Membership</option>
+                    <option value="junior">Junior Membership</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <div class="form-check">
+                    <input type="checkbox" id="volunteer" class="form-check-input" />
+                    <label for="volunteer" class="form-check-label">Yes, I am a volunteer</label>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-block btn-lg shadow">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>

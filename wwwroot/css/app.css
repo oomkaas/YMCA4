@@ -2,20 +2,6 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-a, .btn-link {
-    color: #006bb7;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 .content {
     padding-top: 1.1rem;
 }
@@ -62,7 +48,7 @@ h1:focus {
 }
 
     .blazor-error-boundary::after {
-        content: "An error has occurred."
+        content: "An error has occurred.";
     }
 
 .status-bar-safe-area {
@@ -106,3 +92,58 @@ h1:focus {
         }
     }
 }
+
+/* Base styles for buttons */
+.btn {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+}
+
+    /* Button hover and focus states */
+    .btn:hover,
+    .btn:focus {
+        background-color: #333; /* Slightly lighter black for hover/focus */
+        color: white;
+    }
+
+/* Primary button style */
+.btn-primary {
+    background-color: black; /* Ensure primary buttons are black */
+    color: white;
+    border: none;
+}
+
+    /* Primary button hover and focus states */
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #333; /* Slightly lighter black for hover/focus */
+        color: white;
+    }
+
+/* Optional: Secondary button style if needed */
+.btn-secondary {
+    background-color: black; /* Ensure secondary buttons are black */
+    color: white;
+    border: none;
+}
+
+    /* Secondary button hover and focus states */
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+        background-color: #333; /* Slightly lighter black for hover/focus */
+        color: white;
+    }
+
+/* Additional button styles if you have other button classes */
+.btn-outline {
+    color: black; /* Text color for outline buttons */
+    border: 1px solid black; /* Border color for outline buttons */
+}
+
+    .btn-outline:hover,
+    .btn-outline:focus {
+        background-color: black; /* Black background on hover/focus */
+        color: white; /* White text on hover/focus */
+        border-color: black; /* Ensure border color stays black */
+    }
