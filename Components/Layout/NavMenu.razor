@@ -1,72 +1,100 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: white;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: black;
+        }
+        
+
+        .nav-link {
+            padding: 10px; 
+        }
+    </style>
+</head>
+
+<div class="top-row ps-3 navbar navbar-dark" style="background-color : white; font-size: 100%;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Home</a>
+        <div class="top-row ps-3 navbar navbar-dark" style="background-color : white; margin-bottom: 20px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" style="color: black;" href="dashboard"><h2>YMCA</h2></a>
+            </div>
+        </div>
     </div>
 </div>
 
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()" style="background-color : white; color: black;">
     <nav class="flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="admin">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Admin
+            <NavLink class="nav-link" href="admin" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Admin
             </NavLink>
 
-            <NavLink class="nav-link" href="bulletinboard">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> BulletinBoard
+            <NavLink class="nav-link" href="bulletinboard" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> BulletinBoard
             </NavLink>
 
-            <NavLink class="nav-link" href="calender">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Calender
+            <NavLink class="nav-link" href="calender" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Calender
             </NavLink>
 
-            <NavLink class="nav-link" href="chats">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Chats
+            <NavLink class="nav-link" href="chats" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Chats
             </NavLink>
 
-            <NavLink class="nav-link" href="chatting">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Chatting
+            <NavLink class="nav-link" href="chatting" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Chatting
             </NavLink>
 
-            <NavLink class="nav-link" href="dashboard">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Dashboard
+            <NavLink class="nav-link" href="dashboard" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Dashboard
             </NavLink>
 
-            <NavLink class="nav-link" href="donate">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Donate
+            <NavLink class="nav-link" href="donate" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Donate
             </NavLink>
 
-            <NavLink class="nav-link" href="landing">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Landing
+            <NavLink class="nav-link" href="landing" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Landing
             </NavLink>
 
-            <NavLink class="nav-link" href="localymca">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Find Local YMCA
+            <NavLink class="nav-link" href="localymca" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Find Local YMCA
             </NavLink>
 
-            <NavLink class="nav-link" href="">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Login
+            <NavLink class="nav-link" href="" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Login
             </NavLink>
 
-            <NavLink class="nav-link" href="news">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> News
+            <NavLink class="nav-link" href="news" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> News
             </NavLink>
 
-            <NavLink class="nav-link" href="register">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Register
+            <NavLink class="nav-link" href="register" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Register
             </NavLink>
 
-            <NavLink class="nav-link" href="settings">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Settings
+            <NavLink class="nav-link" href="settings" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Settings
             </NavLink>
 
-            <NavLink class="nav-link" href="useraccount">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Account Management
+            <NavLink class="nav-link" href="useraccount" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Account Management
             </NavLink>
 
-            <NavLink class="nav-link" href="volunteer">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Volunteer
+            <NavLink class="nav-link" href="volunteer" style="color: black;">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" style="color: black;"></span> Volunteer
             </NavLink>
         </div>
     </nav>
