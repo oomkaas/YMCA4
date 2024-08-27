@@ -1,7 +1,38 @@
-﻿@page "/dashboard" 
+﻿@page "/dashboard"
 
-<h3>Dashboard</h3>
+@inject NavigationManager NavigationManager
+
+<div class="content px-4 d-flex flex-column justify-content-center align-items-center" style="height: 100vh; margin-bottom: 25px;">
+    <div class="text-center mb-4">
+        <h2>Dashboard</h2>
+    </div>
+
+    <div class="w-100" style="max-width: 600px;">
+        <div class="d-flex flex-column align-items-center">
+            <div>
+            <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("bulletinboard")'>BulletinBoard</button>
+            <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("calender")'>Calender</button>
+                <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("news")'>News</button>
+            </div>
+
+            <div>
+            <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("chats")'>Chats</button>
+            <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("chatting")'>Chatting</button>
+            </div>
+
+            <div>
+            <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("donate")'>Donate</button>
+            <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("localymca")'>Find Local YMCA</button>
+            <button class="btn btn-primary mb-3" @onclick='() => NavigateTo("volunteer")'>Volunteer</button>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 @code {
-
+    private void NavigateTo(string page)
+    {
+        NavigationManager.NavigateTo($"/{page}");
+    }
 }

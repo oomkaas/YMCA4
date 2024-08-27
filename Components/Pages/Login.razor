@@ -1,37 +1,50 @@
-﻿@page "/"
+﻿@page "/login"
 
-<div class="d-flex justify-content-center" style="margin-bottom: 25px;">
-    <h2>Login</h2>
+@inject NavigationManager NavigationManager
+
+<div class="content px-4 d-flex flex-column justify-content-center align-items-center" style="height: 100vh; margin-bottom: 25px;">
+
+    <div class="text-center mb-4">
+        <h2>Login</h2>
+    </div>
+
+    <div class="w-100" style="max-width: 400px;">
+        <form>
+            <div class="mb-4">
+                <input type="text" id="userEmail" class="form-control form-control-lg shadow" placeholder="Email" />
+            </div>
+
+            <div class="mb-4">
+                <input type="password" id="userPassword" class="form-control form-control-lg shadow" placeholder="Password" />
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="rememberMe" checked />
+                    <label class="form-check-label" for="rememberMe"> Remember me </label>
+                </div>
+                <a href="#!" class="small">Forgot password?</a>
+            </div>
+
+            <div class="text-center mb-4">
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block btn-lg shadow" @onclick="NavigateToDashboard">Sign in</button>
+            </div>
+
+            <div class="text-center">
+                <p>Not a member? <a href="#" @onclick="NavigateToRegister">Register</a></p>
+            </div>
+        </form>
+    </div>
 </div>
 
-<form>
-
-    <div class="d-flex justify-content-center" style="margin-bottom: 20px;">
-        <input type="text" id="userEmail" class="form-control form-control-lg shadow" placeholder="Email" />
-    </div>
-
-    <div class="d-flex justify-content-center" style="margin-bottom: 20px;">
-        <input type="text" id="userPassword" class="form-control form-control-lg shadow" placeholder="Password" />
-    </div>
-
-    <div class="d-flex justify-content-center" style="margin-bottom: 10px;">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="rememberMe" checked />
-            <label class="form-check-label" for="rememberMe"> Remember me </label>
-        </div>
-        <a href="#!" style="margin-left: 10px;">Forgot password ?</a>
-    </div>
-
-    <div class="d-flex justify-content-center">
-        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block btn-lg mb-4 shadow">Sign in</button>
-    </div>
-
-    <div class="text-center">
-        <p>Not a member? <a href="#!">Register</a></p>
-    </div>
-</form>
-
-
 @code {
+    private void NavigateToDashboard()
+    {
+        NavigationManager.NavigateTo("/dashboard");
+    }
 
+    private void NavigateToRegister()
+    {
+        NavigationManager.NavigateTo("/register");
+    }
 }
