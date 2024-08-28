@@ -123,57 +123,51 @@ h1:focus {
     }
 }
 
-/* Base styles for buttons */
 .btn {
-    background-color: black; /* Black background */
-    color: white; /* White text */
-    border: none; /* Remove border */
+    background-color: black; 
+    color: white; 
+    border: none; 
 }
 
-    /* Button hover and focus states */
     .btn:hover,
     .btn:focus {
-        background-color: #333; /* Slightly lighter black for hover/focus */
+        background-color: #333; 
         color: white;
     }
 
-/* Primary button style */
 .btn-primary {
-    background-color: black; /* Ensure primary buttons are black */
+    background-color: black; 
     color: white;
     border: none;
 }
 
-    /* Primary button hover and focus states */
     .btn-primary:hover,
     .btn-primary:focus {
-        background-color: #333; /* Slightly lighter black for hover/focus */
+        background-color: #333; 
         color: white;
     }
 
-/* Optional: Secondary button style if needed */
 .btn-secondary {
-    background-color: black; /* Ensure secondary buttons are black */
+    background-color: black;
     color: white;
     border: none;
 }
 
-    /* Secondary button hover and focus states */
     .btn-secondary:hover,
     .btn-secondary:focus {
-        background-color: #333; /* Slightly lighter black for hover/focus */
+        background-color: #333; 
         color: white;
     }
 
-/* Additional button styles if you have other button classes */
+
 .btn-outline {
-    color: black; /* Text color for outline buttons */
-    border: 1px solid black; /* Border color for outline buttons */
+    color: black;
+    border: 1px solid black; 
 }
 
     .btn-outline:hover,
     .btn-outline:focus {
-        background-color: black; /* Black background on hover/focus */
-        color: white; /* White text on hover/focus */
-        border-color: black; /* Ensure border color stays black */
+        background-color: black; 
+        color: white; 
+        border-color: black; 
     }
