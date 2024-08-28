@@ -1,7 +1,66 @@
 ﻿@page "/chatting"
 
-<h3>Chatting</h3>
+@inject NavigationManager NavigationManager
+
+<div class="chat-container d-flex flex-column justify-content-between p-3" style="height: 100vh;">
+    <div class="chat-header text-center mb-3">
+        <h3>Chatting</h3>
+    </div>
+
+    <div class="chat-content border p-3 rounded mb-3" style="flex-grow: 1; overflow-y: auto;">
+        @foreach (var chatMessage in chatMessages)
+        {
+            <div class="d-flex mb-2">
+                @if (chatMessage.IsReceived)
+                {
+                    <div class="received-message p-2 rounded bg-light" style="max-width: 70%;">
+                        <p class="mb-1">@chatMessage.Text</p>
+                        <small class="text-muted">@chatMessage.Timestamp.ToString("HH:mm")</small>
+                    </div>
+                }
+                else
+                {
+                    <div class="ms-auto sent-message p-2 rounded bg-primary text-white" style="max-width: 70%;">
+                        <p class="mb-1">@chatMessage.Text</p>
+                        <small class="text-light">@chatMessage.Timestamp.ToString("HH:mm:ss")</small>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="chat-input d-flex">
+        <input @bind="newMessage" @bind:event="oninput" type="text" class="form-control me-2" placeholder="Type a message..." />
+        <button class="btn btn-primary" @onclick="SendMessage">Send</button>
+    </div>
+</div>
 
 @code {
+    private string newMessage = string.Empty;
+    private List<ChatMessage> chatMessages = new List<ChatMessage>();
 
+    private void SendMessage()
+    {
+        if (!string.IsNullOrWhiteSpace(newMessage))
+        {
+            var isReceived = chatMessages.Count % 2 != 0;
+            chatMessages.Add(new ChatMessage
+                {
+                    Text = newMessage,
+                    IsReceived = isReceived,
+                    Timestamp = DateTime.Now
+                });
+
+            newMessage = string.Empty;
+
+            InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private class ChatMessage
+    {
+        public string Text { get; set; }
+        public bool IsReceived { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
 }

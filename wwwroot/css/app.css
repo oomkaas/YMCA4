@@ -47,8 +47,8 @@ h1:focus {
     }
 
 .container {
-    max-height: 100vh; /* Adjust as necessary */
-    overflow-y: auto; /* Adds vertical scrollbar if needed */
+    max-height: 100vh; 
+    overflow-y: auto; 
 }
 
 
