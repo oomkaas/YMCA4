@@ -13,6 +13,8 @@
             either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
         <!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
 
+      <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+
         <OutputType>Exe</OutputType>
         <RootNamespace>YMCA3</RootNamespace>
         <UseMaui>true</UseMaui>
