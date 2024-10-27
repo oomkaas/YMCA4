@@ -8,7 +8,7 @@
         position: fixed;
         top: 0;
         left: 240px; /* Adjust this value to start the background image to the right of the sidebar */
-        width: calc(100% - 200px); /* Reduce width to account for sidebar width */
+        width: calc(100% - 240px); /* Reduce width to account for sidebar width */
         height: 100%;
         background-image: url('/blur-background.ico');
         background-size: cover;
@@ -20,16 +20,36 @@
     /* Content area styling */
     .content {
         position: relative;
-        z-index: 1; /* Ensure content is on top of the background */
+        z-index: 2; /* Ensure content is on top of the background */
+    }
+
+    /* Top banner styling */
+    .top-banner {
+        position: absolute;
+        top: 0;
+        left: 0; /* Start from the leftmost edge */
+        width: 90vw; /* Stretch to the full viewport width */
+        height: 180px; /* Set a height for the banner */
+        background-image: url('/praise.ico'); /* Use praise.ico as background */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1; /* Ensure banner is on top of background but below content */
     }
 </style>
 
 <!-- Background Image Div -->
 <div class="background"></div>
 
+<div class="ymca-logo-container" style="text-align: center; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 3;">
+    <img src="/YMCA_LOGO.ico" alt="YMCA Logo" style="height: 75px;">
+</div>
+<!-- Top banner image spanning the width of the content area -->
+<div class="top-banner"></div>
+
 <div class="content px-4 d-flex flex-column justify-content-center align-items-center" style="height: 100vh; margin-bottom: 25px;">
     <div class="text-center mb-4">
-        <h2>Dashboard</h2>
+        <h2 style="font-size: 2.5rem; font-weight: bold; color: #000000;">Dashboard</h2>
     </div>
 
     <div class="w-100" style="max-width: 600px;">
